@@ -1,0 +1,515 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Corporation Problem Analysis & Service</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <!-- ICON MASTER -->
+    <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
+
+
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="content_wrapper">
+        <!--Navbar -->
+        <nav class="fixed-top mb-1 navbar navbar-expand-lg navbar-dark default-color">
+            <a class="navbar-brand" href="#">CCPAS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">About
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ward</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Law</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reported Information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Budget</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto nav-flex-icons">
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                            aria-labelledby="navbarDropdownMenuLink-333">
+                            <a class="dropdown-item" href="#">Login</a>
+                            <a class="dropdown-item" href="#">Registration</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--/.Navbar -->
+
+
+        <!-- SLIDER -->
+        <div class="__slider_wrap">
+            <div class="row">
+                <div class="col-9">
+                    <div class="__slider">
+                        <!--Carousel Wrapper-->
+                        <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+                            <!--Indicators-->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-2" data-slide-to="2"></li>
+                            </ol>
+                            <!--/.Indicators-->
+                            <!--Slides-->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class="view">
+                                        <img class="d-block w-100"
+                                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+                                            alt="First slide">
+                                        <div class="mask rgba-black-light"></div>
+                                    </div>
+                                    <div class="carousel-caption">
+                                        <h3 class="h3-responsive">Light mask</h3>
+                                        <p>First text</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <!--Mask color-->
+                                    <div class="view">
+                                        <img class="d-block w-100"
+                                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+                                            alt="Second slide">
+                                        <div class="mask rgba-black-strong"></div>
+                                    </div>
+                                    <div class="carousel-caption">
+                                        <h3 class="h3-responsive">Strong mask</h3>
+                                        <p>Secondary text</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <!--Mask color-->
+                                    <div class="view">
+                                        <img class="d-block w-100"
+                                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+                                            alt="Third slide">
+                                        <div class="mask rgba-black-slight"></div>
+                                    </div>
+                                    <div class="carousel-caption">
+                                        <h3 class="h3-responsive">Slight mask</h3>
+                                        <p>Third text</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Slides-->
+                            <!--Controls-->
+                            <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            <!--/.Controls-->
+                        </div>
+                        <!--/.Carousel Wrapper-->
+                    </div>
+                    <div class="marque">
+                        <marquee width="100%" direction="left" height="50px">
+                            This is a sample scrolling text that has scrolls texts to left. Sonagazir Ovi Nazmul Haque, Sonagazir Ovi Nazmul Haque. Sonagazir Ovi Nazmul Haque.
+                        </marquee>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="mayor_photo">
+                        <div class="_photo">
+                            <img src="images/ovi.jpg" alt="Sonagazi Mator">
+                        </div>
+                        <div class="desc">
+                            <h2>Nazmul Haque Ovy</h2>
+                            <p style="font-weight: bold;font-size: 1.5rem">Mayor</p>
+                            <p>Sonagazi</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer diam turpis,
+                                sollicitudin ac convallis eu, rhoncus non lacus. In eget diam magna.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- </SLIDER -->
+        <div class="actions_wrapper">
+            <div class="row">
+                <div class="col-9">
+                    <div class="actions">
+                        <div class="row">
+                            <div class="col-4 mb-2">
+                                <div class="action">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="icon">
+                                                <i style="color: #4285f4;" class="im im-question"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <br />
+                                        <div class="col">
+                                            <button type="button" class="btn btn-primary">solved problem</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-4 mb-2">
+                                <div class="action">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="icon">
+                                                <i style="color: #a6c;" class="im im-note-o"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <br />
+                                        <div class="col">
+                                            <button type="button" class="btn btn-secondary">view permission</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-4 mb-2">
+                                <div class="action">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="icon">
+                                                <i style="color: #00c851;" class="im im-task-o"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <br />
+                                        <div class="col">
+                                            <button type="button" class="btn btn-success">Task Analysis</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-4 mb-2">
+                                <div class="action">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="icon">
+                                                <i style="color: #ff3547;" class="im im-newspaper-o"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <br />
+                                        <div class="col">
+                                            <button type="button" class="btn btn-danger">Govt Work Shop</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-4 mb-2">
+                                <div class="action">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="icon">
+                                                <i style="color: #fb3 ;" class="im im-info"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <br />
+                                        <div class="col">
+                                            <button type="button" class="btn btn-warning">Recruitement Notice</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-4 mb-2">
+                                <div class="action">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="icon">
+                                                <i style="color: #33b5e5;" class="im im-speech-bubble-comments"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <br />
+                                        <div class="col">
+                                            <button type="button" class="btn btn-info">Public Feedback</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-4 mb-2">
+                                <div class="action">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="icon">
+                                                <i style="color:#ff83d0;" class="im im-graduation-hat"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <br />
+                                        <div class="col">
+                                            <button style="background-color: #ff83d0 !important; color: white"
+                                                type="button" class="btn btn-light">School College</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-4 mb-2">
+                                <div class="action">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="icon">
+                                                <i class="im im-phone"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <br />
+                                        <div class="col">
+                                            <button type="button" class="btn btn-dark">Hotline</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-4 mb-2">
+                                <div class="action">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="icon">
+                                                <i style="color: #4285f4;" class="im im-location"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <br />
+                                        <div class="col">
+                                            <button type="button" class="btn btn-primary">Visit Place</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="mayor_photo">
+                        <div class="_photo">
+                            <img src="images/ovi.jpg" alt="Sonagazi Mator">
+                        </div>
+                        <div class="desc">
+                            <h2>Nazmul Haque Ovy</h2>
+                            <p style="font-weight: bold;font-size: 1.5rem">CEO</p>
+                            <p>Sonagazi</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer diam turpis,
+                                sollicitudin ac convallis eu, rhoncus non lacus. In eget diam magna.</p>
+                        </div>
+                    </div>
+                    <div class="sample_video">
+                        <video width="100%" height="240" controls>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+
+        <!-- Footer -->
+        <footer class="page-footer font-small special-color-dark indigo pt-4">
+
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
+
+                        <!-- Content -->
+                        <h5 class="text-uppercase">CCPAS</h5>
+                        <p>City Corporation Problem Analysis & Service</p>
+
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 4</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 4</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+
+            <!-- Footer Elements -->
+            <div class="container">
+
+                <!-- Social buttons -->
+                <ul class="list-unstyled list-inline text-center">
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-fb mx-1">
+                            <i class="fab fa-facebook-f"> </i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-tw mx-1">
+                            <i class="fab fa-twitter"> </i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-gplus mx-1">
+                            <i class="fab fa-google-plus-g"> </i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-li mx-1">
+                            <i class="fab fa-linkedin-in"> </i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-dribbble mx-1">
+                            <i class="fab fa-dribbble"> </i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Social buttons -->
+
+            </div>
+            <!-- Footer Elements -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://mdbootstrap.com/"> ccpas.com</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+    </div>
+</body>
+
+</html>
+{% endblock %}

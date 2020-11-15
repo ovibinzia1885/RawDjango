@@ -1,0 +1,97 @@
+{% block content %}
+{%load staticfiles%}
+<head>
+    <title> Add peoblem </title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+</head>
+<form action="new" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <label for="inputtype" class="col-sm-2 col-form-label">Through By:</label>
+    <select name="throwby">
+  <option value="mayor">mayor</option>
+  <option value="councilor">councilor</option>
+
+</select>
+   <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Name:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="inputEmail1" placeholder="name" name="name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email:</label>
+    <div class="col-sm-6">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">phone:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="inputPassword3" placeholder="phone" name="phone">
+    </div>
+  </div>
+
+    <div class="form-group ">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Application_Type::</label>
+      <div class="col-sm-6">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="ovi" id="gridRadios1" value="Enviroment" checked>
+          <label class="form-check-label" for="gridRadios1">
+            Emviroment
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="ovi" id="gridRadios2" value="Electricity">
+          <label class="form-check-label" for="gridRadios2">
+            Electricity
+          </label>
+        </div>
+         <div class="form-check ">
+          <input class="form-check-input" type="radio" name="ovi" id="gridRadios3" value="Water" >
+          <label class="form-check-label" for="gridRadios3">
+            HOME_Make
+          </label>
+        </div>
+
+         <div class="form-group row">
+    <label for="address" class="col-sm-2 col-form-label">address:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="inputEmail0" placeholder="address" name="address">
+    </div>
+  </div>
+  <label for="input" class="col-sm-2 col-form-label">WardNO:</label>
+    <select name="WardNO">
+  <option value="1">1</option>
+  <option value="2">2</option>
+
+</select>
+
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Messerment :</label>
+          <textarea rows="4" cols="50" name="comment" >
+brief your application,.</textarea>
+        </div>
+         <label for="payment" class="col-sm-2 col-form-label">payment:</label>
+    <select name="payment">
+  <option value="Bkhas">Bkhas</option>
+  <option value="DBBL">DBBL</option>
+
+</select>
+
+      </div>
+    </div>
+
+
+  <div class="form-group ">
+    <div class="col-sm-6">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
+<div>
+
+</div>
+
+
+
+{% endblock content %}

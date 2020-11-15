@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> permission form all</title>
+</head>
+ <table class="table mb-0">
+<thead>
+      <tr>
+
+        <th>Title</th>
+
+        <th>Download</th>
+
+      </tr>
+    </thead>
+<body>
+<h2 class="center"> permission form</h2>
+	{% for post in file %}
+  <tr>
+        <td>{{post.title}}</td>
+        <td><a href="{{post.adminupload.url}}" download="{{post.adminupload.url}}">Download</a></td>
+  </tr>
+        </body>
+        </table>
+</html>
+
+	{% endfor %}
+
